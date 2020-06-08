@@ -43,7 +43,7 @@ variable "public_ip_address_allocation" {
 }
 
 variable "tags" {
-  type = "map"
+  type = map(string)
 
   default = {
     source = "terraform"
@@ -51,7 +51,7 @@ variable "tags" {
 }
 
 variable "type" {
-  type        = "string"
+  type        = string
   description = "(Optional) Defined if the loadbalancer is private or public"
   default     = "public"
 }
@@ -70,3 +70,4 @@ variable "frontend_private_ip_address_allocation" {
   description = "(Optional) Frontend ip allocation type (Static or Dynamic)"
   default     = "Dynamic"
 }
+
